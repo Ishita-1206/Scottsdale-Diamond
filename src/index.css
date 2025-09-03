@@ -1,0 +1,221 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Lumière Jewelry Design System - Luxury Fine Jewelry Brand
+All colors are HSL for perfect theming. Premium, minimal, luxurious aesthetic.
+*/
+
+@layer base {
+  :root {
+    /* Core brand colors - Luxury jewelry palette */
+    --background: 45 20% 98%; /* Warm pearl white */
+    --foreground: 0 0% 8%; /* Rich black */
+    
+    --card: 45 25% 96%; /* Soft cream card */
+    --card-foreground: 0 0% 8%;
+    
+    --popover: 45 25% 96%;
+    --popover-foreground: 0 0% 8%;
+    
+    /* Primary gold - signature luxury gold */
+    --primary: 45 85% 47%; /* Rich champagne gold */
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 45 60% 85%; /* Soft gold highlight */
+    --primary-dark: 45 90% 35%; /* Deep gold accent */
+    
+    /* Secondary cream - elegant neutrals */
+    --secondary: 40 30% 92%; /* Warm beige */
+    --secondary-foreground: 0 0% 15%;
+    
+    --muted: 40 20% 88%; /* Subtle beige */
+    --muted-foreground: 0 0% 45%;
+    
+    --accent: 45 70% 88%; /* Light gold accent */
+    --accent-foreground: 0 0% 15%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    
+    /* Borders and inputs - subtle luxury */
+    --border: 40 25% 85%;
+    --input: 40 25% 90%;
+    --ring: 45 85% 47%;
+    
+    --radius: 1rem; /* More elegant rounded corners */
+    
+    /* Custom luxury gradients */
+    --gradient-gold: linear-gradient(135deg, hsl(45 85% 47%), hsl(45 70% 55%));
+    --gradient-gold-subtle: linear-gradient(135deg, hsl(45 60% 85%), hsl(45 40% 90%));
+    --gradient-hero: linear-gradient(135deg, hsl(45 20% 98%) 0%, hsl(40 30% 92%) 100%);
+    
+    /* Premium shadows */
+    --shadow-luxury: 0 10px 40px -10px hsl(45 85% 47% / 0.15);
+    --shadow-card: 0 4px 20px -4px hsl(0 0% 0% / 0.1);
+    --shadow-gold: 0 0 30px hsl(45 85% 47% / 0.3);
+    
+    /* Animation values */
+    --transition-luxury: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: all 0.3s ease-out;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark luxury theme - Rich midnight with gold accents */
+    --background: 0 0% 8%; /* Rich black */
+    --foreground: 45 20% 95%; /* Warm white */ 
+    
+    --card: 0 0% 12%; /* Dark card */
+    --card-foreground: 45 20% 95%;
+    
+    --popover: 0 0% 12%;
+    --popover-foreground: 45 20% 95%;
+    
+    --primary: 45 85% 55%; /* Brighter gold in dark mode */
+    --primary-foreground: 0 0% 8%;
+    --primary-light: 45 60% 75%;
+    --primary-dark: 45 90% 45%;
+    
+    --secondary: 0 0% 18%; /* Dark beige */
+    --secondary-foreground: 45 20% 90%;
+    
+    --muted: 0 0% 15%;
+    --muted-foreground: 45 10% 65%;
+    
+    --accent: 45 70% 25%; /* Dark gold accent */
+    --accent-foreground: 45 20% 90%;
+    
+    --destructive: 0 84% 65%;
+    --destructive-foreground: 0 0% 95%;
+    
+    --border: 0 0% 20%;
+    --input: 0 0% 15%;
+    --ring: 45 85% 55%;
+    
+    /* Dark mode gradients */
+    --gradient-gold: linear-gradient(135deg, hsl(45 85% 55%), hsl(45 70% 65%));
+    --gradient-gold-subtle: linear-gradient(135deg, hsl(45 60% 25%), hsl(45 40% 18%));
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 8%) 0%, hsl(0 0% 12%) 100%);
+    
+    /* Dark luxury shadows */
+    --shadow-luxury: 0 10px 40px -10px hsl(45 85% 55% / 0.25);
+    --shadow-card: 0 4px 20px -4px hsl(0 0% 0% / 0.4);
+    --shadow-gold: 0 0 30px hsl(45 85% 55% / 0.4);
+    
+    --sidebar-background: 0 0% 10%;
+    --sidebar-foreground: 45 20% 90%;
+    --sidebar-primary: 45 85% 55%;
+    --sidebar-primary-foreground: 0 0% 8%;
+    --sidebar-accent: 0 0% 15%;
+    --sidebar-accent-foreground: 45 20% 90%;
+    --sidebar-border: 0 0% 18%;
+    --sidebar-ring: 45 85% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter antialiased;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+  
+  /* Typography hierarchy */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-playfair;
+  }
+  
+  /* Luxury scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-muted;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary rounded-full;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary/80;
+  }
+}
+
+@layer components {
+  /* Premium button variants */
+  .btn-luxury {
+    @apply px-8 py-4 rounded-xl font-inter font-medium tracking-wide;
+    @apply bg-gradient-to-r from-primary to-primary-light text-foreground;
+    @apply shadow-luxury hover:shadow-gold transform hover:scale-105;
+    @apply transition-all duration-300 ease-out;
+  }
+  
+  .btn-outline-luxury {
+    @apply px-8 py-4 rounded-xl font-inter font-medium tracking-wide;
+    @apply border-2 border-primary text-primary bg-transparent;
+    @apply hover:bg-primary hover:text-foreground hover:shadow-luxury;
+    @apply transform hover:scale-105 transition-all duration-300 ease-out;
+  }
+  
+  /* Product card luxury styling */
+  .product-card {
+    @apply bg-card rounded-2xl overflow-hidden shadow-card;
+    @apply hover:shadow-luxury transform hover:scale-105;
+    @apply transition-all duration-300 ease-out cursor-pointer;
+  }
+  
+  .product-card:hover .product-image {
+    @apply scale-110;
+  }
+  
+  .product-image {
+    @apply transition-transform duration-500 ease-out;
+  }
+  
+  /* Hero section styling */
+  .hero-gradient {
+    background: var(--gradient-hero);
+  }
+  
+  /* Luxury input styling */
+  .input-luxury {
+    @apply px-6 py-4 rounded-xl border-2 border-border bg-background;
+    @apply focus:border-primary focus:ring-2 focus:ring-primary/20;
+    @apply transition-all duration-300 ease-out font-inter;
+  }
+  
+  /* Gold accent hover effect */
+  .gold-hover {
+    @apply hover:text-primary transition-colors duration-300;
+  }
+  
+  /* Elegant fade-in animation */
+  .fade-in {
+    @apply animate-fade-in;
+  }
+  
+  /* Luxury section spacing */
+  .section-luxury {
+    @apply py-20 px-4 sm:px-6 lg:px-8;
+  }
+}
