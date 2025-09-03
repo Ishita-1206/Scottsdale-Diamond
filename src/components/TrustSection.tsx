@@ -60,7 +60,7 @@ const TrustSection = () => {
           className="text-center mb-10"
         >
           <h2 className="text-3xl lg:text-4xl font-playfair font-bold text-foreground mb-4">
-            Why Choose Lumière
+            Why Choose Scottsdale Diamond
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             We're committed to providing you with the finest jewelry experience from selection to aftercare.
